@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
@@ -11,7 +12,7 @@ app.use(cors());
 // app.use(express.urlencoded({ extended: true }));
 
 app.get('/test', (req, res) => {
-	res.send('may final demo');
+	res.send(process.env.NISIM);
 });
 
 app.listen(port, () => {
